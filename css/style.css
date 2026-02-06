@@ -2,9 +2,12 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+        overflow: hidden;
+
 }
 
 header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
