@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/Group 551.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <title>Cadastro Aluno - Devant</title>
+</head>
+<body>
+    <header>
+     <img class="ml-[1%]" src="assets/logo.png" alt="Logo Devant">
+     <button class="botao-adm px-6 py-2">
+        <a href="login-adm.htm" class="text-center ml-[15%]">ADM</a>
+     </button>
+    </header>
+    <main>
+    <section class="login">
+        <div class="login-container w-[50.5rem] h-[42rem] max-w-[50.5rem] mx-auto p-8 py-8 bg-white rounded-[20px] shadow-lg mb-8 mt-[5%]" data-aos="fade-up">
+            <div class="text-center">
+                <h1 class="text-[300%] font-semibold text-[#333333] mb-2">Cadastro</h1>
+                <h3 class="text-[100%] text-gray-500 mb-[3%]">Complete seu cadastro</h3>
+            </div>
+
+            <form action="login" method="post" class="space-y-6 mt-[-1%]">
+                <div>
+                    <input
+                            type="text"
+                            placeholder="Matrícula"
+                            name="matricula"
+                            class="w-full p-[20px] border border-gray-300 rounded-full focus:ring-2 focus:ring-[#619AD6] focus:border-transparent outline-none transition-all shadow-sm"
+                            required>
+                </div>
+                <div>
+                    <input
+                            type="text"
+                            placeholder="Nome"
+                            name="nome"
+                            class="w-full p-[20px] border border-gray-300 rounded-full focus:ring-2 focus:ring-[#619AD6] focus:border-transparent outline-none transition-all shadow-sm"
+                            required>
+                </div>
+                <div>
+                    <input
+                            type="email"
+                            placeholder="Email"
+                            name="email"
+                            class="w-full p-[20px] border border-gray-300 rounded-full focus:ring-2 focus:ring-[#619AD6] focus:border-transparent outline-none transition-all shadow-sm"
+                            required>
+                </div>
+                <div>
+                    <input
+                            type="password"
+                            placeholder="Senha"
+                            name="senha"
+                            class="w-full p-[20px] border border-gray-300 rounded-full focus:ring-2 focus:ring-[#619AD6] focus:border-transparent outline-none transition-all shadow-sm"
+                            required>
+                </div>
+                <div>
+                    <input
+                            type="password"
+                            placeholder="Confirmar Senha"
+                            name="senha"
+                            class="w-full p-[20px] border border-gray-300 rounded-full focus:ring-2 focus:ring-[#619AD6] focus:border-transparent outline-none transition-all shadow-sm"
+                            required>
+                </div>
+
+
+                
+                <button
+                        type="submit" onclick=""
+                        class="w-[30%] p-[15px] mt-[7%] bg-[#619AD6] hover:bg-[#4e7cac] text-white font-semibold rounded-full transition-all transform hover:scale-105 shadow-md ml-[35%]">
+                    Cadastrar
+                </button>
+            </form>
+        </div>
+    </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login-adm.css">
+    <link rel="icon" href="assets/Group 551.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <title>Login ADM - Devant</title>
+</head>
+<body>
+    <header>
+     <img class="ml-[1%]" src="assets/logo.png" alt="Logo Devant">
+     <button class="botao-voltar px-6 py-2">
+        <a href="index.htm" class="text-center mr-[10%]">Voltar</a>
+     </button>
+    </header>
+    <main>
+    <section class="login">
+        <div class="login-container w-[50.5rem] h-[33.5rem] max-w-[50.5rem] mx-auto p-8 py-8 bg-[#7F95AB] rounded-[20px] shadow-lg mb-8">
+            <div class="text-center">
+                <h1 class="text-[300%] font-semibold text-white mb-2">Login</h1>
+                <h3 class="text-[150%] font-semibold text-white">Administrador</h3>
+            </div>
+
+            <form action="login" method="post" class="space-y-6 mt-[10%] ">
+                <div>
+                    <input
+                            type="email"
+                            placeholder="E-mail"
+                            name="email"
+                            class="w-full p-[20px] border border-gray-300 rounded-full focus:ring-2 focus:ring-[#274855] focus:border-transparent outline-none transition-all shadow-sm"
+                            required>
+                </div>
+
+                <div>
+                    <input
+                            type="password"
+                            placeholder="Senha"
+                            name="password"
+                            class="w-full p-[20px] border border-gray-300 rounded-full focus:ring-2 focus:ring-[#274855] focus:border-transparent outline-none transition-all shadow-sm"
+                            required>
+                </div>
+                
+                <button
+                        type="submit" onclick=""
+                        class="w-[30%] p-[15px] mt-[-10%] bg-[#274855] hover:bg-[#1B333C] text-white font-semibold rounded-full transition-all transform hover:scale-105 shadow-md ml-[35%]">
+                    Entrar
+                </button>
+            </form>
+        </div>
+    </section>
+</main>
+</body>
+</html>

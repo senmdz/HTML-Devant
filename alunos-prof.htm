@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/alunos-prof.css">
+  <link rel="stylesheet" href="css/indicador.css">
+  <link rel="icon" href="assets/Group 551.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <title>Alunos - Devant</title>
+</head>
+
+<body class="bg-[#EDEFEF]">
+  <header class="bg-[#619AD6] text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center">
+      <div class="flex-1">
+        <a href="perfil-prof.htm">
+          <img src="assets/logo.png" alt="Logo" class="h-9">
+        </a>
+      </div>
+
+      <nav class="nav flex-1 flex justify-center mb-[-1%]">
+        <ul class="flex gap-12 items-center">
+          <li>
+            <a href="perfil-prof.htm" class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
+              <i data-feather="user"></i> Perfil
+            </a>
+          </li>
+
+          <li>
+            <a href="alunos-prof.htm" class="nav-link ativo flex items-center gap-2 hover:opacity-80 text-[120%]">
+              <i data-feather="book"></i> Alunos
+            </a>
+          </li>
+
+          <li>
+            <a href="observacoes-prof.htm" class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
+              <i data-feather="eye"></i> Observações
+            </a>
+          </li>
+        </ul>
+        <div class="indicador"></div>
+      </nav>
+
+      <div class="flex-1 flex justify-end">
+        <a href="index.htm"
+          class="flex items-center gap-2 bg-tranparent border-2 border-white text-white font-semibold px-4 py-2 rounded-[20px] hover:bg-[#F01C1C] hover:text-white transition">
+          <i data-feather="log-out"></i> Sair
+        </a>
+      </div>
+
+    </div>
+  </header>
+  <main class="flex-1 p-4">
+    <section>
+      <h1 class="text-[#3a3a3a] font-semibold text-[220%] text-left mb-2">Alunos</h1>
+
+
+      <div class="flex items-center gap-4 mb-6 justify-between">
+        <div
+          class="h-9 inline-flex items-center gap-2 bg-[#DFEBF7] border border-[#619AD6] rounded-[10px] px-4 py-2 text-[#3a3a3a] font-semibold whitespace-nowrap">
+          <i data-feather="users" class="w-7 h-7 text-[#619AD6]"></i>
+          <span class="w-full block text-[80%]">Total Alunos: 2</span>
+        </div>
+        <div class="flex justify-end items-center gap-2">
+
+          <div class="flex items-center border-2 border-[#619AD6] rounded-[10px] px-3 py-2 h-10 w-80">
+            <input type="text" placeholder="Pesquisar aluno"
+              class="flex-1 bg-transparent text-gray-700 placeholder-gray-400 focus:outline-none">
+
+            <button type="submit">
+              <i class="text-gray-500 hover:text-[#3C9D9B] cursor-pointer w-5 h-5" data-feather="search"></i>
+            </button>
+          </div>
+
+          <div class="flex items-center gap-2 border-2 border-[#619AD6] rounded-[10px] px-4 h-10">
+            <span>Filtrar</span>
+            <i data-feather="chevron-down" class="w-5 h-5 text-[#619AD6]"></i>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow max-w-6xl mx-auto overflow-x-auto overflow-y-auto">
+
+        <table class="w-full">
+          <thead>
+            <tr class="bg-[#DFEBF7] text-[#7F95AB]">
+              <th class="p-3 text-left">NOME</th>
+              <th class="p-3 text-center">MATRÍCULA</th>
+              <th class="p-3 text-center">TURMA</th>
+              <th class="p-3 text-center">NOTA 1</th>
+              <th class="p-3 text-center">NOTA 2</th>
+              <th class="p-3 text-center">MÉDIA</th>
+              <th class=" p-3 text-center">RESULTADO</th>
+              <th class=" p-3 text-center">OUTROS</th>
+            </tr>
+          </thead>
+          <tbody id="corpo-tabela">
+            <tr class="bg-white">
+              <td class="px-2 py-1 border-b text-[100%] space-y-2">João Gomes da Silva</td>
+              <td class="px-2 py-1 border-b text-[100%] space-y-2 text-center">1GT</td>
+              <td class="px-2 py-1 border-b text-[100%] text-center space-y-2">2° E.M. J</td>
+              <td class="px-2 py-1 border-b text-[100%] font-semibold text-center space-y-2 text-[#F01C1C]">4.5</td>
+              <td class="px-2 py-1 border-b text-[100%] font-semibold text-center space-y-2 text-[#3088E5]">9.7</td>
+              <td class="px-2 py-1 border-b text-[100%] space-y-2 font-semibold text-center text-[#3088E5]">7.1</td>
+              <td class="px-2 py-1 border-b text-[100%] space-y-2 font-semibold text-center text-[#3088E5]">APROVADO
+              </td>
+              <td class="px-2 py-1 border-b text-xs">
+                <div class="flex flex-col items-center gap-2">
+                  <button
+                    class="w-40 h-8 flex items-center justify-center bg-[#DFEBF7] hover:bg-[#D6E1EC] text-[#7F95AB] font-semibold rounded-full">
+                    ENVIAR OBSERVAÇÃO
+                  </button>
+
+                  <button
+                    class="w-40 h-8 flex items-center justify-center bg-[#DFEBF7] hover:bg-[#D6E1EC] text-[#7F95AB] font-semibold rounded-full">
+                    ENVIAR NOTA
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </section>
+  </main>
+  <script>
+    feather.replace();
+  </script>
+  <script src="js/indicador-aba.js"></script>
+</body>
+
+</html>
