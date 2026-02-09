@@ -55,52 +55,69 @@
   </header>
   <main class="flex-1 p-4">
     <section>
-      <h1 class="text-[#3a3a3a] font-semibold text-[220%] text-left mb-2">Matérias</h1>
+      <div class="min-h-screen bg-background p-6 ">
+        <div class="max-w-3xl mx-auto">
+          <h1 class="text-[200%] text-[#3a3a3a] font-bold text-foreground">Minhas Disciplinas</h1>
+          <hr class="mt-1 mb-6 border-primary/30" />
+          <div
+            class="h-9 inline-flex items-center gap-2 bg-[#ECF5FF] border border-[#274855] rounded-[10px] px-4 py-2 text-[#3a3a3a] font-semibold whitespace-nowrap mb-2">
+            <i data-feather="file" class="w-7 h-7 text-[#274855]"></i>
+            <span class="w-full block text-[80%]">Total Disciplinas: 1</span>
+          </div>
 
-
-      <div class="flex items-center gap-4 mb-6 justify-between">
-        <div
-          class="h-9 inline-flex items-center gap-2 bg-[#DFEBF7] border border-[#619AD6] rounded-[10px] px-4 py-2 text-[#3a3a3a] font-semibold whitespace-nowrap">
-          <i data-feather="users" class="w-7 h-7 text-[#619AD6]"></i>
-          <span class="w-full block text-[80%]">Total Matérias: 1</span>
-        </div>
-        <div class="flex justify-end items-center gap-2">
-
-
-
+          <div class="space-y-3">
+            <div
+              class="bg-white rounded-lg border border-border bg-card px-5 py-4 border-l-4 border-l-[#D16F6F] shadow-sm flex items-center justify-between">
+              <span class="font-semibold text-[130%] text-[#283565]">Português</span>
+              <button onclick="abrirPopUp()"
+                class="font-semibold text-[#619AD6]  text-primary hover:text-[#598ABE] transition-all ease-in-out duration-200">Ver
+                Boletim</button>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="bg-white rounded-lg shadow max-w-6xl mx-auto overflow-x-auto overflow-y-auto">
+
+    <!-- POPUP MOBILE -->
+    <div id="popup-desempenho"
+      class="fixed inset-0 bg-black/40 flex items-center justify-center overflow-x-auto overflow-y-auto hidden">
+
+      <div class="bg-white rounded-lg shadow max-w-[60%] w-full relative p-4">
+        <button onclick="fecharPopUp()" class="absolute top-3 right-3 text-gray-600 hover:text-red-600">
+          ✖
+        </button>
 
         <table class="w-full">
           <thead>
-            <tr class="bg-[#DFEBF7] text-[#7F95AB]">
-              <th class="p-3 text-left">NOME</th>
+            <tr class="text-black">
               <th class="p-3 text-center">NOTA 1</th>
               <th class="p-3 text-center">NOTA 2</th>
               <th class="p-3 text-center">MÉDIA</th>
-              <th class=" p-3 text-center">RESULTADO</th>
+              <th class="p-3 text-center">RESULTADO</th>
             </tr>
           </thead>
-          <tbody id="corpo-tabela">
-            <tr class="bg-white" style="height: 50px;">
-              <td class="px-2 py-1 border-b text-[100%] space-y-2">História</td>
-              <td class="px-2 py-1 border-b text-[100%] font-semibold text-center space-y-2 text-[#F01C1C]">4.5</td>
-              <td class="px-2 py-1 border-b text-[100%] font-semibold text-center space-y-2 text-[#3088E5]">9.7</td>
-              <td class="px-2 py-1 border-b text-[100%] space-y-2 font-semibold text-center text-[#3088E5]">7.1</td>
-              <td class="px-2 py-1 border-b text-[100%] space-y-2 font-semibold text-center text-[#3088E5]">APROVADO
-              </td>
 
+          <tbody>
+            <tr>
+              <td class="p-2 border-b text-center font-semibold text-[#F01C1C]">4.5</td>
+              <td class="p-2 border-b text-center font-semibold text-[#3088E5]">9.7</td>
+              <td class="p-2 border-b text-center font-semibold text-[#3088E5]">7.1</td>
+              <td class="p-2 border-b text-center font-semibold text-[#3088E5]">APROVADO</td>
             </tr>
           </tbody>
+
         </table>
-    </section>
+
+      </div>
+    </div>
+
   </main>
   <script>
     feather.replace();
   </script>
   <script src="js/indicador-aba.js"></script>
+  <script src="js/desempenho.js"></script>
 </body>
 
 </html>
