@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/adm.css">
     <link rel="stylesheet" href="css/indicador-adm.css">
-    <link rel="icon" href="assets/Group-558.ico">
+    <link rel="icon" href="assets/Group 551.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <title>Alterar Alunos - Devant</title>
@@ -25,38 +25,38 @@
                 <ul class="flex gap-12 items-center">
                     <li>
                         <a href="perfil-adm.htm" class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
-                            <i data-feather="user"></i> Perfil
+                            Perfil
                         </a>
                     </li>
                     <li>
                         <a href="turmas-adm.htm" class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
-                            <i data-feather="folder"></i> Turmas
+                            Turmas
                         </a>
                     </li>
 
                     <li>
                         <a href="alunos-adm.htm"
                             class="nav-link ativo flex items-center gap-2 hover:opacity-80 text-[120%]">
-                            <i data-feather="book"></i> Alunos
+                            Alunos
                         </a>
                     </li>
                     <li>
                         <a href="professores-adm.htm"
                             class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
-                            <i data-feather="clipboard"></i> Professores
+                            Professores
                         </a>
                     </li>
                     <li>
                         <a href="matérias-adm.htm"
                             class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
-                            <i data-feather="layers"></i> Disciplinas
+                            Disciplinas
                         </a>
                     </li>
 
                     <li>
                         <a href="observacoes-adm.htm"
                             class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
-                            <i data-feather="eye"></i> Observações
+                            Observações
                         </a>
                     </li>
                 </ul>
@@ -78,59 +78,56 @@
                 <h1 class="text-left"><i data-feather="arrow-left"></i></h1>
             </a>
             <h1 class="text-[2.25rem] font-bold text-[#333333] mb-8 text-center mt-[2%]" data-aos="fade-down">Alterar
-                Aluno</h1>
+                nota de Nome do Aluno</h1>
 
             <div class="bg-white rounded-[15px] shadow-md p-8 max-w-lg mx-auto mt-[3%]" data-aos="fade-up"
                 data-aos-delay="100">
                 <form action="#" method="post">
                     <div class="mb-6">
-                        <label for="nome" class="block text-gray-700 text-sm font-medium mb-2">Nome:</label>
-                        <input type="text" id="nome" name="nome"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-[15px] focus:ring-1 focus:ring-[#7F95AB]"
-                            placeholder="Digite nome do aluno atualizado..."
-                            required>
-                    </div>
-                    <div class="mb-6">
-                        <label for="matricula" class="block text-gray-700 text-sm font-medium mb-2">Matrícula:</label>
-                        <input type="text" id="matricula" name="matricula"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-[15px] focus:ring-1 focus:ring-[#7F95AB]"
-                            placeholder="Digite a matrícula do aluno atualizada..."
-                            required>
+                        <label for="aluno" class="block text-gray-700 text-sm font-medium mb-2 mt-2">Aluno:</label>
+                        <select
+                            class="w-full px-4 py-3 border border-gray-300 rounded-[15px] focus:ring-1 focus:ring-[#7F95AB]""
+                        name=" aluno" id="aluno" required>
+                            <option disabled hidden selected value>Selecione uma
+                                opção</option>
+                            <option value="aluno1">Neymar</option>
+                        </select>
                     </div>
                     <div class="mb-6">
                         <label for="turma" class="block text-gray-700 text-sm font-medium mb-2 mt-2">Turma:</label>
                         <select
-                            class="w-full px-4 py-3 border border-gray-300 rounded-[15px] focus:ring-1 focus:ring-[#7F95AB]""
-                        name=" turma" id="turma" required>
-                            <option disabled hidden selected value >Selecione uma
+                            class="w-full px-4 py-3 border border-gray-300 rounded-[15px] focus:ring-1 focus:ring-[#7F95AB]"
+                            name=" turma" id="turma" required>
+                            <option disabled hidden value>Selecione uma
                                 opção</option>
-                            <option value="turma1">2°E.M. J</option>
+                            <option selected value="turma1">2°E.M. J</option>
                         </select>
                     </div>
                     <div class="mb-6">
-                        <label for="email" class="block text-gray-700 text-sm font-medium mb-2">E-mail:</label>
-                        <input type="email" id="email" name="email"
+                        <label for="n1" class="block text-gray-700 text-sm font-medium mb-2">Nota 1:</label>
+                        <input type="number" id="n1" name="n1" min="0" max="10" step="0.1"
                             class="w-full px-4 py-3 border border-gray-300 rounded-[15px] focus:ring-1 focus:ring-[#7F95AB]"
-                            placeholder="Digite o email do aluno atualizado..."
-                            required>
+                            placeholder="Digite a nota 1..." required>
                     </div>
                     <div class="mb-6">
-                        <label for="senha" class="block text-gray-700 text-sm font-medium mb-2">Senha:</label>
-                        <input type="text" id="senha" name="senha"
+                        <label for="n2" class="block text-gray-700 text-sm font-medium mb-2">Nota 2:</label>
+                        <input type="number" id="n2" name="n2" min="0" max="10" step="0.1"
                             class="w-full px-4 py-3 border border-gray-300 rounded-[15px] focus:ring-1 focus:ring-[#7F95AB]"
-                            placeholder="Digite a senha do aluno atualizada..."
-                            required>
+                            placeholder="Digite a nota 2..." required>
                     </div>
                     <div class="mb-6">
-                        <label for="foto" class="block text-gray-700 text-sm font-medium mb-2">Foto:</label>
-                        <input type="file" id="uploadImg" accept="image/*">
+                        <label for="media" class="block text-gray-700 text-sm font-medium mb-2">Média:</label>
+                        <input type="number" id="media" name="media" min="0" max="10" step="0.1"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-[15px] focus:ring-1 focus:ring-[#7F95AB]"
+                            placeholder="Aqui aparece a média do aluno..." required>
                     </div>
+
 
 
                     <div class="text-center">
                         <button type="submit"
-                            class="bg-[#7F95AB] border border-[#274855] rounded-[10px] px-4 py-2 text-white font-semibold whitespace-nowrap hover:bg-[#667788] transition-all duration-200 ease-in-out">
-                            Atualizar
+                            class="bg-[#274855] border border-[#274855] rounded-[10px] px-4 py-2 text-white font-semibold whitespace-nowrap hover:bg-[#667788] transition-all duration-200 ease-in-out">
+                            Enviar
                         </button>
                     </div>
                 </form>
