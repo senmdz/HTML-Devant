@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/indicador.css">
+  <link rel="stylesheet" href="css/alunos-prof.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="icon" href="assets/Group 551.ico">
+  <title>Perfil - Devant</title>
+</head>
+
+<body>
+  <header>
+    <img src="assets/devant.svg" alt="Logo Devant">
+    <nav>
+      <ul>
+        <li><a href="perfil-aluno.html">Perfil</a></li>
+        <li><a href="materias-aluno.htm">Matérias</a></li>
+      </ul>
+    </nav>
+    <button onclick="window.location.href='login-aluno.htm'">Sair</button>
+  </header>
+  <main>
+    <section>
+      <h1 style="color: #274855; margin-bottom: 0; margin-left: 2.5rem; margin-top: 2rem; font-size: 2rem;">Meu Perfil</h1>
+      <hr style="width: 95%;  background-color: #274855;">
+      <div style="display: flex; gap: 1rem; margin-left: 2.5rem;">
+        <button style="background-color: #274855; color: white;font-size: .6rem; border-radius: 5px; border: none; padding: 6px; padding-right: 60px; ">Notas</button>
+        <button style="background-color: #274855; color: white;font-size: .6rem; border-radius: 5px; border: none; padding: 6px; padding-right: 50px; " onclick="window.location.href='observacoes-aluno.htm'">Observações</button>
+      </div>
+      <span style="display: flex; margin-top: 3rem; margin-left: 2.5rem;">
+        <img src="assets/perfil.jpg" alt="Foto de Perfil"
+          style="border-radius: 100%; width: 150px; height: 150px; object-fit: cover;">
+        <h2 style="margin-top: 4rem; margin-left: 1rem; color:rgba(40, 53, 101, 1); font-weight: bold;">João Gomes da Silva</h2>
+      </span>
+      <ul style="display: flex; flex-direction: column;">
+        <span>
+          <p style="margin-top: .5rem; margin-bottom: 0;">Período:</p>
+          <p style="margin: 0; color: rgba(40, 53, 101, 1); font-weight: bold;">Matutino</p>
+        </span>
+        <span>
+          <p style="margin-top: 2.5rem; margin-bottom: 0;">Turma:</p>
+          <p style="margin: 0; color: rgba(40, 53, 101, 1); font-weight: bold;">8J</p>
+        </span>
+        <span>
+          <p style="margin-top: 2.5rem; margin-bottom: 0;">Matrícula:</p>
+          <p style="margin: 0; color: rgba(40, 53, 101, 1); font-weight: bold;">S1UR3C3B42024</p>
+        </span>
+      </ul>
+
+    </section>
+  </main>
+</body>
+
+</html>

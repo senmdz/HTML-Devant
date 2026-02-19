@@ -6,8 +6,8 @@
     position: absolute;
     bottom: -100%;
     height: 8px;
-    width: 15px;
-    background: #BFDEFF;
+    width: 20px;
+    background: #ffffff;
     border-radius: 6px;
     transition: all 0.35s ease;
 }
