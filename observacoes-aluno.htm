@@ -59,9 +59,26 @@
         <div class="max-w-3xl mx-auto">
           <h1 class="text-[200%] text-[#3a3a3a] font-bold text-foreground">Observações</h1>
           <hr class="mt-1 mb-6 border-[#283565]/20" />
-          <div class="flex items-center justify-end mb-4">
-            <div class="flex items-center border-2 border-[#283565] rounded-[10px] px-3 py-2 h-10 w-80">
-              <input type="text" placeholder="Pesquisar mensagem"
+          <div class="flex items-center justify-between mb-4 gap-2">
+            <div
+              class="bg-white rounded-lg border border-border bg-card px-5 py-4 max-h-[50%] whitespace-nowrap border-l-[6px] border-l-[#274855] shadow-sm">
+              <span class="font-semibold text-[130%] text-[#283565] flex justify-center">1</span>
+              <span class="font-regular text-[80%] text-[#283565]/70] flex justify-center">Observações recebidas</span>
+            </div>
+            <div
+              class="bg-white rounded-lg border border-border bg-card px-5 py-4 max-h-[50%] whitespace-nowrap border-l-[6px] border-l-[#CD3434] shadow-sm">
+              <span class="font-semibold text-[130%] text-[#283565] flex justify-center">0</span>
+              <span class="font-regular text-[80%] text-[#283565]/70] flex justify-center">PDM recebidos
+              </span>
+            </div>
+            <div
+              class="bg-white rounded-lg border border-border bg-card px-5 py-4 max-h-[50%] whitespace-nowrap border-l-[6px] border-l-[#34AD38] shadow-sm">
+              <span class="font-semibold text-[130%] text-[#283565] flex justify-center">1</span>
+              <span class="font-regular text-[80%] text-[#283565]/70] flex justify-center">Elogios recebidos
+              </span>
+            </div>
+            <div class="flex items-center border-2 border-[#283565] rounded-[10px] px-3 py-2 h-10 w-90">
+              <input type="text" placeholder="Pesquisar"
                 class="flex-1 bg-transparent text-gray-700 placeholder-gray-400 focus:outline-none">
 
               <button type="submit">
@@ -69,20 +86,58 @@
               </button>
             </div>
           </div>
-          <div
-            class="bg-white shadow-lg rounded-2xl p-4 w-full max-w-[120%] h-38 border-1 border-[#000000] flex justify-between mb-4">
-            <div class="space-y-4">
-              <div>
-                <h2 class=" font-semibold text-gray-900 text-[130%] max-w-[100%]">Mensagem: Melhore sua postura</h1>
-                  <p class="text-gray-400">Para: João Gomes da Silva - 06/02/1996</p>
-              </div>
+          <button class="space-y-3 w-full">
+            <div onclick="abrirPopUpObs()"
+              class="bg-white rounded-lg border border-border bg-card px-5 py-4 w-full border-l-[6px] border-l-[#34AD38] shadow-sm">
+              <span class="font-semibold text-[130%] text-[#283565] flex justify-start">Ass: Melhore sua
+                postura</span>
+              <span class="font-regular text-[80%] text-[#283565]/70] flex justify-start">De: Maria Odete</span>
+              <span class="font-regular text-[80%] text-[#283565] flex justify-end">06/02</span>
             </div>
-            <a href="mostrar-obs-aluno.htm">
-              <p class="flex justify-end font-semibold text-[#619AD6] cursor-pointer hover:text-[#598ABE] self-end">
-                Abrir
-              </p>
-            </a>
-          </div>
+          </button>
+
+          <div id="popup-observação"
+            class="fixed inset-0 bg-black/40 flex items-center justify-center overflow-x-auto overflow-y-auto hidden">
+
+            <div class="bg-white rounded-lg shadow max-w-[60%] w-full relative p-4">
+              <div class="flex justify-between items-start">
+
+
+                <div class="flex gap-3 items-start">
+                  <img src="assets/perfil-adm.jpg" alt="Foto de Perfil"
+                    class="w-12 h-12 rounded-full object-cover border-4 border-gray-100 shadow-sm">
+
+                  <div>
+                    <p class="font-semibold text-[80%] text-[#283565]">
+                      Maria Odete
+                    </p>
+
+                    <p class="text-[80%] text-[#283565]/70">
+                      Para: João Gomes da Silva
+                    </p>
+                  </div>
+                </div>
+
+
+                <p class="text-[75%] text-gray-500">
+                  01/01
+                </p>
+              </div>
+              <div class="mt-4 flex justify-center">
+                <p class="w-full max-w-[80%] break-words">
+                  Saiu da escola
+                  KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+                  Boa noite.</p>
+              </div>
+              <button id="voltarBtn" onclick="fecharPopUpObs()"
+                class="h-9 inline-flex items-center gap-2 bg-[#ECF5FF] border border-[#283565] rounded-[10px] px-4 py-2 text-[#3a3a3a] font-semibold whitespace-nowrap hover:bg-[#ECF5FF]/40 transition-all duration-200 ease-in-out mt-4">
+                <i data-feather="chevron-left" class="w-7 h-7 text-[#283565]"></i>
+                <span id="voltarTexto" class="w-full block text-[80%] text-[#283565]">Voltar</span>
+
+              </button>
+            </div>
+
+
 
 
     </section>
@@ -91,6 +146,8 @@
     feather.replace();
   </script>
   <script src="js/indicador-aba.js"></script>
+  <script src="js/observacao.js"></script>
+  <script src="js/dropdown.js"></script>
 </body>
 
 </html>

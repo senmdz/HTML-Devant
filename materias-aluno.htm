@@ -65,6 +65,12 @@
               <i data-feather="file" class="w-7 h-7 text-[#283565]"></i>
               <span class="w-full block text-[80%] text-[#283565]">Total Disciplinas: 1</span>
             </div>
+            <button id="gerarBol" onclick="abrirPopUpBol()"
+              class="h-9 inline-flex items-center gap-2 bg-[#619AD6] shadow-md rounded-[10px] px-4 py-2 text-white font-semibold whitespace-nowrap">
+              <i data-feather="printer" class="w-7 h-7 text-white"></i>
+              <span class="w-full block text-[80%] text-white">Gerar Boletim Completo</span>
+            </button>
+
             <div class="flex items-center border-2 border-[#283565] rounded-[10px] px-3 py-2 h-10 w-80">
               <input type="text" placeholder="Pesquisar disciplina"
                 class="flex-1 bg-transparent text-gray-700 placeholder-gray-400 focus:outline-none">
@@ -80,7 +86,7 @@
             <div
               class="bg-white rounded-lg border border-border bg-card px-5 py-4 border-l-4 border-l-[#D16F6F] shadow-sm flex items-center justify-between">
               <span class="font-semibold text-[130%] text-[#283565]">Português</span>
-              <button onclick="abrirPopUp()"
+              <button onclick="abrirPopUpDes()"
                 class="font-semibold text-[#619AD6]  text-primary hover:text-[#598ABE] transition-all ease-in-out duration-200">Ver
                 Boletim</button>
 
@@ -96,7 +102,7 @@
       class="fixed inset-0 bg-black/40 flex items-center justify-center overflow-x-auto overflow-y-auto hidden">
 
       <div class="bg-white rounded-lg shadow max-w-[60%] w-full relative p-4">
-        <button onclick="fecharPopUp()" class="absolute top-3 right-3 text-gray-600 hover:text-red-600">
+        <button onclick="fecharPopUpDes()" class="absolute top-3 right-3 text-gray-600 hover:text-red-600">
           ✖
         </button>
 
@@ -123,6 +129,40 @@
 
       </div>
     </div>
+    <!-- POPUP BOLETIM -->
+    <div id="popup-boletim"
+      class="fixed inset-0 bg-black/40 flex items-center justify-center overflow-x-auto overflow-y-auto hidden">
+
+      <div class="bg-white rounded-lg shadow max-w-[60%] w-full relative p-4">
+        <button onclick="fecharPopUpBol()" class="absolute top-3 right-3 text-gray-600 hover:text-red-600">
+          ✖
+        </button>
+
+        <table class="w-full">
+          <thead>
+            <tr class="text-black">
+              <th class="p-3 text-center">DISCIPLINA</th>
+              <th class="p-3 text-center">NOTA 1</th>
+              <th class="p-3 text-center">NOTA 2</th>
+              <th class="p-3 text-center">MÉDIA</th>
+              <th class="p-3 text-center">RESULTADO</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="p-2 border-b text-center font-semibold">Português</td>
+              <td class="p-2 border-b text-center font-semibold text-[#F01C1C]">4.5</td>
+              <td class="p-2 border-b text-center font-semibold text-[#3088E5]">9.7</td>
+              <td class="p-2 border-b text-center font-semibold text-[#3088E5]">7.1</td>
+              <td class="p-2 border-b text-center font-semibold text-[#3088E5]">APROVADO</td>
+            </tr>
+          </tbody>
+
+        </table>
+
+      </div>
+    </div>
 
   </main>
   <script>
@@ -130,6 +170,7 @@
   </script>
   <script src="js/indicador-aba.js"></script>
   <script src="js/desempenho.js"></script>
+  <script src="js/boletim.js"></script>
 </body>
 
 </html>
