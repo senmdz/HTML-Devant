@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/alunos-prof.css">
+  <link rel="stylesheet" href="css/aluno.css">
   <link rel="stylesheet" href="css/indicador.css">
   <link rel="icon" href="assets/Group 551.ico">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -14,8 +14,8 @@
 
 <body class="bg-[#EDEFEF]">
   <header class="text-white shadow-md">
-    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center">
-      <div class="flex-1">
+    <div class="max-w-7xl mx-auto px-0 py-3 flex items-center">
+      <div class="flex-1" style="margin-left: -50px; margin-right: 40px;">
         <a href="perfil-aluno.htm">
           <img src="assets/logo.png" alt="Logo" class="h-9">
         </a>
@@ -25,19 +25,19 @@
         <ul class="flex gap-12 items-center">
           <li>
             <a href="perfil-aluno.htm" class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
-              <i data-feather="user"></i> Perfil
+              Perfil
             </a>
           </li>
 
           <li>
             <a href="alunos-prof.htm" class="nav-link ativo flex items-center gap-2 hover:opacity-80 text-[120%]">
-              <i data-feather="book"></i> Matérias
+              Matérias
             </a>
           </li>
 
           <li>
             <a href="observacoes-aluno.htm" class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
-              <i data-feather="eye"></i> Observações
+              Observações
             </a>
           </li>
         </ul>
@@ -58,12 +58,23 @@
       <div class="min-h-screen bg-background p-6 ">
         <div class="max-w-3xl mx-auto">
           <h1 class="text-[200%] text-[#3a3a3a] font-bold text-foreground">Minhas Disciplinas</h1>
-          <hr class="mt-1 mb-6 border-primary/30" />
-          <div
-            class="h-9 inline-flex items-center gap-2 bg-[#ECF5FF] border border-[#274855] rounded-[10px] px-4 py-2 text-[#3a3a3a] font-semibold whitespace-nowrap mb-2">
-            <i data-feather="file" class="w-7 h-7 text-[#274855]"></i>
-            <span class="w-full block text-[80%]">Total Disciplinas: 1</span>
+          <hr class="mt-1 mb-6 border-[#283565]/20" />
+          <div class="flex items-center justify-between mb-4">
+            <div
+              class="h-9 inline-flex items-center gap-2 bg-[#ECF5FF] border border-[#283565] rounded-[10px] px-4 py-2 text-[#3a3a3a] font-semibold whitespace-nowrap">
+              <i data-feather="file" class="w-7 h-7 text-[#283565]"></i>
+              <span class="w-full block text-[80%] text-[#283565]">Total Disciplinas: 1</span>
+            </div>
+            <div class="flex items-center border-2 border-[#283565] rounded-[10px] px-3 py-2 h-10 w-80">
+              <input type="text" placeholder="Pesquisar disciplina"
+                class="flex-1 bg-transparent text-gray-700 placeholder-gray-400 focus:outline-none">
+
+              <button type="submit">
+                <i class="text-gray-500 hover:text-[#3C9D9B] cursor-pointer w-5 h-5" data-feather="search"></i>
+              </button>
+            </div>
           </div>
+
 
           <div class="space-y-3">
             <div
@@ -72,6 +83,7 @@
               <button onclick="abrirPopUp()"
                 class="font-semibold text-[#619AD6]  text-primary hover:text-[#598ABE] transition-all ease-in-out duration-200">Ver
                 Boletim</button>
+
             </div>
           </div>
         </div>

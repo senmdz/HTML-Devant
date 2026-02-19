@@ -7,7 +7,7 @@ function moverIndicador() {
     const navRect = ativo.closest(".nav").getBoundingClientRect();
 
     indicador.style.width = rect.width + "px";
-    indicador.style.left = rect.left - navRect.left + 5 + "px";
+    indicador.style.left = rect.left - navRect.left + 10 + "px";
 }
 
 moverIndicador();

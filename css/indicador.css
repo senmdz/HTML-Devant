@@ -4,7 +4,8 @@
 
 .indicador {
     position: absolute;
-    bottom: -100%;
+    bottom: -75%;
+    margin-left: -2%;
     height: 8px;
     width: 15px;
     background: #BFDEFF;
