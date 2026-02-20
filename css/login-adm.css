@@ -9,15 +9,16 @@ body {
 
 header {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: .5rem;
     background-color: #7F95AB;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header img {
-    width: 12%;
+    width: 2%;
 }
 
 .botao-voltar {
